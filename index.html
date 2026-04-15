@@ -56,6 +56,7 @@
     function getCleanUrl(imgName) {
         // 1. 预处理：全角转半角
         let name = imgName.replace(/＞/g, ">").replace(/＜/g, "<");
+        + name = name.replace(/\.[^.]+$/, '.webp');
         
         // 2. 编码处理：
         // 使用 encodeURI 对中文进行编码，它会保留 #, >, < 等符号
